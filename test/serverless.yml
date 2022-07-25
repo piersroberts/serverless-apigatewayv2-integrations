@@ -20,6 +20,6 @@ custom:
     domain: some.host.com
     path: testpath
     title: MyApiTitle
-    eventBridges:
+    eventBridge:
       busName: some-bus
       sourceName: some-source-name
