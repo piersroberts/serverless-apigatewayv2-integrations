@@ -1,0 +1,25 @@
+service: apigateway-v2-integrations-test
+
+frameworkVersion: "3"
+
+plugins:
+  - ../src/plugin.js
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-central-1
+
+functions:
+  hello:
+    handler: handler.hello
+
+custom:
+  integrations:
+    prefix: PiersTest
+    domain: some.host.com
+    path: testpath
+    title: MyApiTitle
+    eventBridges:
+      busName: some-bus
+      sourceName: some-source-name
